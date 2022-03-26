@@ -53,6 +53,7 @@ namespace ooplab
                     this.Close();
                 }
             }
+            MessageBox.Show("Username and password not match");
         }
     }
 }
