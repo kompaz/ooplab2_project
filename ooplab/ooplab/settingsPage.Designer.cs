@@ -63,7 +63,7 @@ namespace ooplab
             this.rBtnNormal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rBtnNormal.Name = "rBtnNormal";
             this.rBtnNormal.Size = new System.Drawing.Size(65, 19);
-            this.rBtnNormal.TabIndex = 1;
+            this.rBtnNormal.TabIndex = 4;
             this.rBtnNormal.TabStop = true;
             this.rBtnNormal.Text = "Normal";
             this.rBtnNormal.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace ooplab
             this.rBtnHard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rBtnHard.Name = "rBtnHard";
             this.rBtnHard.Size = new System.Drawing.Size(51, 19);
-            this.rBtnHard.TabIndex = 2;
+            this.rBtnHard.TabIndex = 5;
             this.rBtnHard.TabStop = true;
             this.rBtnHard.Text = "Hard";
             this.rBtnHard.UseVisualStyleBackColor = true;
