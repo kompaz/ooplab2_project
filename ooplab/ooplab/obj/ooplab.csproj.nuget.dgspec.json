@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\goknu\\Desktop\\git\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj": {}
+    "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\goknu\\Desktop\\git\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj": {
+    "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\goknu\\Desktop\\git\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
+        "projectUniqueName": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
         "projectName": "ooplab",
-        "projectPath": "C:\\Users\\goknu\\Desktop\\git\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
+        "projectPath": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
         "packagesPath": "C:\\Users\\goknu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\goknu\\Desktop\\git\\ooplab2_project\\ooplab\\ooplab\\obj\\",
+        "outputPath": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
