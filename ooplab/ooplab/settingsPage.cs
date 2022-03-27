@@ -17,6 +17,25 @@ namespace ooplab
 
         private void rBtnCustom_CheckedChanged(object sender, EventArgs e)
         {
+            if(rBtnCustom.Checked)
+            {
+                txBx_Mtrx1.Visible = true;
+                txBx_Mtrx2.Visible = true;
+            }
+            else
+            {
+                txBx_Mtrx1.Visible = false;
+                txBx_Mtrx2.Visible = false;
+            }
+        }
+
+        private void txBx_Mtrx1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txBx_Mtrx2_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
