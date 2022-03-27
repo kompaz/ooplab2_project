@@ -15,7 +15,7 @@ namespace ooplab
             InitializeComponent();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        private void rBtnCustom_CheckedChanged(object sender, EventArgs e)
         {
 
         }
