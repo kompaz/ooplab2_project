@@ -13,6 +13,7 @@ namespace ooplab
         public settingsPage()
         {
             InitializeComponent();
+
         }
 
         private void rBtnCustom_CheckedChanged(object sender, EventArgs e)
@@ -21,6 +22,7 @@ namespace ooplab
             {
                 txBx_Mtrx1.Visible = true;
                 txBx_Mtrx2.Visible = true;
+                txBx_Mtrx1.Focus();
             }
             else
             {
