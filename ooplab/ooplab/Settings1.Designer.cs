@@ -94,5 +94,41 @@ namespace ooplab {
                 this["data_custom_clmn"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool data_blue {
+            get {
+                return ((bool)(this["data_blue"]));
+            }
+            set {
+                this["data_blue"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool data_green {
+            get {
+                return ((bool)(this["data_green"]));
+            }
+            set {
+                this["data_green"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool data_purple {
+            get {
+                return ((bool)(this["data_purple"]));
+            }
+            set {
+                this["data_purple"] = value;
+            }
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace ooplab
         private void button1_Click(object sender, EventArgs e)
         {
             settingsPage settings = new settingsPage();
-            settings.Show();
+            settings.ShowDialog();
         }
     }
 }

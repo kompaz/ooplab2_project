@@ -34,9 +34,14 @@ namespace ooplab
                 (txBx_Mtrx1.Text) = Settings1.Default.data_custom_row.ToString();
                 (txBx_Mtrx2.Text) = Settings1.Default.data_custom_clmn.ToString();
             }
+
             checkBox1.Checked = Settings1.Default.data_square;
             checkBox2.Checked = Settings1.Default.data_triangle;
             checkBox3.Checked = Settings1.Default.data_round;
+
+            checkBox4.Checked = Settings1.Default.data_blue;
+            checkBox5.Checked = Settings1.Default.data_green;
+            checkBox6.Checked = Settings1.Default.data_purple;
 
         }
 
@@ -121,10 +126,35 @@ namespace ooplab
                 Settings1.Default.data_custom_clmn = Int32.Parse(txBx_Mtrx2.Text);
 
             }
+            
+            Settings1.Default.data_blue = checkBox4.Checked;
+            Settings1.Default.data_green = checkBox5.Checked;
+            Settings1.Default.data_purple = checkBox6.Checked;
+
             Settings1.Default.data_square = checkBox1.Checked;
             Settings1.Default.data_triangle = checkBox2.Checked;
             Settings1.Default.data_round = checkBox3.Checked;
             Settings1.Default.Save();
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

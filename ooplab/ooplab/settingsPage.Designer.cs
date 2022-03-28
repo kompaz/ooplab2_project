@@ -41,8 +41,13 @@ namespace ooplab
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.chckbox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.chckbox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rBtnEasy
@@ -187,11 +192,58 @@ namespace ooplab
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // chckbox1
+            // 
+            this.chckbox1.Controls.Add(this.checkBox6);
+            this.chckbox1.Controls.Add(this.checkBox5);
+            this.chckbox1.Controls.Add(this.checkBox4);
+            this.chckbox1.Location = new System.Drawing.Point(388, 24);
+            this.chckbox1.Name = "chckbox1";
+            this.chckbox1.Size = new System.Drawing.Size(250, 149);
+            this.chckbox1.TabIndex = 3;
+            this.chckbox1.TabStop = false;
+            this.chckbox1.Text = "Colour";
+            this.chckbox1.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(11, 116);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(73, 24);
+            this.checkBox6.TabIndex = 2;
+            this.checkBox6.Text = "Purple";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(11, 76);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(70, 24);
+            this.checkBox5.TabIndex = 1;
+            this.checkBox5.Text = "Green";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(11, 36);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(60, 24);
+            this.checkBox4.TabIndex = 0;
+            this.checkBox4.Text = "Blue";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
             // settingsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.chckbox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -201,6 +253,8 @@ namespace ooplab
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.chckbox1.ResumeLayout(false);
+            this.chckbox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,5 +273,9 @@ namespace ooplab
         private System.Windows.Forms.TextBox txBx_Mtrx2;
         private System.Windows.Forms.TextBox txBx_Mtrx1;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.GroupBox chckbox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }
