@@ -157,5 +157,10 @@ namespace ooplab
         {
 
         }
+
+        private void settingsPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
