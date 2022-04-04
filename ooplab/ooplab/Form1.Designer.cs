@@ -34,6 +34,7 @@ namespace ooplab
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cB_showPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -86,12 +87,25 @@ namespace ooplab
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cB_showPassword
+            // 
+            this.cB_showPassword.AutoSize = true;
+            this.cB_showPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cB_showPassword.Location = new System.Drawing.Point(345, 180);
+            this.cB_showPassword.Name = "cB_showPassword";
+            this.cB_showPassword.Size = new System.Drawing.Size(127, 23);
+            this.cB_showPassword.TabIndex = 4;
+            this.cB_showPassword.Text = "Show Password";
+            this.cB_showPassword.UseVisualStyleBackColor = true;
+            this.cB_showPassword.CheckedChanged += new System.EventHandler(this.cB_showPassword_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(670, 405);
+            this.Controls.Add(this.cB_showPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -111,6 +125,7 @@ namespace ooplab
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cB_showPassword;
     }
 }
 
