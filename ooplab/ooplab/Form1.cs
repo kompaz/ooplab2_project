@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace ooplab
 {
@@ -79,6 +81,15 @@ namespace ooplab
             {
                 textBox2.PasswordChar = '*';
             }
+        }
+
+        private void btn_SignUp_Click(object sender, EventArgs e)
+        {
+            signUp register = new signUp();
+
+            register.ShowDialog();
+
+
         }
     }
 }

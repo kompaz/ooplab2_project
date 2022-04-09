@@ -35,6 +35,7 @@ namespace ooplab
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cB_showPassword = new System.Windows.Forms.CheckBox();
+            this.btn_SignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -79,7 +80,7 @@ namespace ooplab
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(223, 223);
+            this.button1.Location = new System.Drawing.Point(345, 235);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 31);
             this.button1.TabIndex = 2;
@@ -99,12 +100,24 @@ namespace ooplab
             this.cB_showPassword.UseVisualStyleBackColor = true;
             this.cB_showPassword.CheckedChanged += new System.EventHandler(this.cB_showPassword_CheckedChanged);
             // 
+            // btn_SignUp
+            // 
+            this.btn_SignUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_SignUp.Location = new System.Drawing.Point(110, 235);
+            this.btn_SignUp.Name = "btn_SignUp";
+            this.btn_SignUp.Size = new System.Drawing.Size(88, 31);
+            this.btn_SignUp.TabIndex = 5;
+            this.btn_SignUp.Text = "Sign Up";
+            this.btn_SignUp.UseVisualStyleBackColor = true;
+            this.btn_SignUp.Click += new System.EventHandler(this.btn_SignUp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(670, 405);
+            this.Controls.Add(this.btn_SignUp);
             this.Controls.Add(this.cB_showPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -126,6 +139,7 @@ namespace ooplab
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox cB_showPassword;
+        private System.Windows.Forms.Button btn_SignUp;
     }
 }
 
