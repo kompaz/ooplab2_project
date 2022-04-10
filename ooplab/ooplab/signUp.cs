@@ -52,5 +52,6 @@ namespace ooplab
             MessageBox.Show("kayit eklendi.");
 
         }
+
     }
 }
