@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
@@ -53,5 +54,21 @@ namespace ooplab
 
         }
 
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            XDocument xUpdate = XDocument.Load(@"veri.xml");
+            XElement elementUpdate = xUpdate.Element("Users").Elements("User").FirstOrDefault(x => x.Element("Username").Value == txtUsername.Text);
+            if (elementUpdate != null)
+            {
+                elementUpdate.SetElementValue("Password", txtPassword.Text);
+                elementUpdate.SetElementValue("Name-Surname", txtNameSurname.Text);
+                elementUpdate.SetElementValue("Phone-Number", txtPhone.Text);
+                elementUpdate.SetElementValue("Address", txtAddress.Text);
+                elementUpdate.SetElementValue("City", txtCity.Text);
+                elementUpdate.SetElementValue("Country", txtCountry.Text);
+                elementUpdate.SetElementValue("E-mail", txtMail.Text);
+                xUpdate.Save(@"veri.xml");
+            }
+        }
     }
 }
