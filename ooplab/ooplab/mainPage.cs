@@ -27,5 +27,12 @@ namespace ooplab
             settingsPage settings = new settingsPage();
             settings.ShowDialog();
         }
+
+        private void btnAdmins_Click(object sender, EventArgs e)
+        {
+            AdminPage admMenu = new AdminPage();
+
+            admMenu.Show();
+        }
     }
 }
