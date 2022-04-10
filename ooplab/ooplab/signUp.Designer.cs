@@ -46,7 +46,6 @@ namespace ooplab
             this.lblMail = new System.Windows.Forms.Label();
             this.lblNameSurname = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -196,23 +195,11 @@ namespace ooplab
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // btnUpdateInfo
-            // 
-            this.btnUpdateInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateInfo.Location = new System.Drawing.Point(344, 94);
-            this.btnUpdateInfo.Name = "btnUpdateInfo";
-            this.btnUpdateInfo.Size = new System.Drawing.Size(85, 40);
-            this.btnUpdateInfo.TabIndex = 18;
-            this.btnUpdateInfo.Text = "Update";
-            this.btnUpdateInfo.UseVisualStyleBackColor = true;
-            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateInfo_Click);
-            // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnUpdateInfo);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.lblNameSurname);
             this.Controls.Add(this.lblMail);
@@ -257,6 +244,5 @@ namespace ooplab
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblNameSurname;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnUpdateInfo;
     }
 }

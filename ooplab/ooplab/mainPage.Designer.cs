@@ -31,6 +31,7 @@ namespace ooplab
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdmins = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,11 +55,22 @@ namespace ooplab
             this.btnAdmins.UseVisualStyleBackColor = true;
             this.btnAdmins.Click += new System.EventHandler(this.btnAdmins_Click);
             // 
+            // btnProfile
+            // 
+            this.btnProfile.Location = new System.Drawing.Point(97, 136);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(85, 40);
+            this.btnProfile.TabIndex = 2;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnAdmins);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -72,6 +84,7 @@ namespace ooplab
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAdmins;
+        public System.Windows.Forms.Button btnAdmins;
+        private System.Windows.Forms.Button btnProfile;
     }
 }

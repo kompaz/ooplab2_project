@@ -12,9 +12,15 @@ namespace ooplab
 {
     public partial class mainPage : Form
     {
-        public mainPage()
+        private string username;
+        public mainPage(string Username)
         {
             InitializeComponent();
+            username = Username;
+            if (username != "admin")
+            {
+                btnAdmins.Visible = false;
+            }
         }
 
         private void mainPage_Load(object sender, EventArgs e)
@@ -33,6 +39,12 @@ namespace ooplab
             AdminPage admMenu = new AdminPage();
 
             admMenu.Show();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Profile profileScreen = new Profile(username);
+            profileScreen.Show();
         }
     }
 }

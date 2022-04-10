@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
@@ -40,7 +41,7 @@ namespace ooplab
             XElement rooelement = xdosya.Root;
             XElement element = new XElement("User");
             XElement username = new XElement("Username", txtUsername.Text);
-            XElement password = new XElement("Password", txtPassword.Text);
+            XElement password = new XElement("Password", sha256_hash(txtPassword.Text));
             XElement NSurname = new XElement("Name-Surname", txtNameSurname.Text);
             XElement phoneNUM = new XElement("Phone-Number", txtPhone.Text);
             XElement address = new XElement("Address", txtAddress.Text);
@@ -54,21 +55,21 @@ namespace ooplab
 
         }
 
-        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        public static String sha256_hash(String value)
         {
-            XDocument xUpdate = XDocument.Load(@"veri.xml");
-            XElement elementUpdate = xUpdate.Element("Users").Elements("User").FirstOrDefault(x => x.Element("Username").Value == txtUsername.Text);
-            if (elementUpdate != null)
+            StringBuilder Sb = new StringBuilder();
+
+            using (System.Security.Cryptography.SHA256 hash = SHA256Managed.Create())
             {
-                elementUpdate.SetElementValue("Password", txtPassword.Text);
-                elementUpdate.SetElementValue("Name-Surname", txtNameSurname.Text);
-                elementUpdate.SetElementValue("Phone-Number", txtPhone.Text);
-                elementUpdate.SetElementValue("Address", txtAddress.Text);
-                elementUpdate.SetElementValue("City", txtCity.Text);
-                elementUpdate.SetElementValue("Country", txtCountry.Text);
-                elementUpdate.SetElementValue("E-mail", txtMail.Text);
-                xUpdate.Save(@"veri.xml");
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
             }
+
+            return Sb.ToString();
         }
+
     }
 }
