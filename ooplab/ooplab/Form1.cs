@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,9 +50,28 @@ namespace ooplab
 
         private void button1_Click(object sender, EventArgs e)
         {
+            XmlDocument xdosya = new XmlDocument();
+            xdosya.Load(@"veri.xml");
+            foreach (XmlNode node in xdosya.DocumentElement)
+            {
+                if ((node["Username"].InnerText) == textBox1.Text && node["Password"].InnerText == sha256_hash(textBox2.Text))
+                {
+                    mainPage menu = new mainPage(node["Username"].InnerText);
+                    Settings1.Default.username = textBox1.Text;
+                    Settings1.Default.Save();
+                    this.Hide();
+                    
+                    menu.ShowDialog();
+                    //Console.WriteLine((node["Username"].InnerText),Environment.NewLine);
+                    //Console.WriteLine((node["Password"].InnerText),Environment.NewLine);
 
-            
-            for (int i=0;i<userList.Count;i++)
+                    this.Close();
+                }
+                
+            }
+            MessageBox.Show("Username and password not match");
+
+            /*for (int i=0;i<userList.Count;i++)
             {
                 if(userList[i].Username == textBox1.Text && userList[i].Password == textBox2.Text)
                 {
@@ -67,8 +87,8 @@ namespace ooplab
                    
                     
                 }
-            }
-            MessageBox.Show("Username and password not match");
+            }*/
+
 
         }
 
@@ -91,6 +111,21 @@ namespace ooplab
             register.ShowDialog();
 
 
+        }
+        public static String sha256_hash(String value)
+        {
+            StringBuilder Sb = new StringBuilder();
+
+            using (System.Security.Cryptography.SHA256 hash = SHA256Managed.Create())
+            {
+                Encoding enc = Encoding.UTF8;
+                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+
+                foreach (Byte b in result)
+                    Sb.Append(b.ToString("x2"));
+            }
+
+            return Sb.ToString();
         }
     }
 }

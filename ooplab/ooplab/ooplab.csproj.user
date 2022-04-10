@@ -13,6 +13,9 @@
     <Compile Update="mainPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="settingsPage.cs">
       <SubType>Form</SubType>
     </Compile>
