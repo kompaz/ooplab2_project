@@ -30,6 +30,7 @@ namespace ooplab
             XmlReader dataReader = XmlReader.Create(@"veri.xml", new XmlReaderSettings());
             dset.ReadXml(dataReader);
             dgwUsers.DataSource = dset.Tables[0];
+            dgwUsers.Columns["Password"].Visible = false;
             dataReader.Close();
         }
 
@@ -110,6 +111,11 @@ namespace ooplab
             }
 
             return Sb.ToString();
+        }
+
+        private void dgwUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

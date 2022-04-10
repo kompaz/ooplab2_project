@@ -1,7 +1,7 @@
 ﻿
 namespace ooplab
 {
-    partial class AdminPage
+    partial class Update
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,6 @@ namespace ooplab
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.dgwUsers = new System.Windows.Forms.DataGridView();
             this.lblNameSurname = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblCountry = new System.Windows.Forms.Label();
@@ -49,206 +45,161 @@ namespace ooplab
             this.txtNameSurname = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnListed = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUsers)).BeginInit();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(530, 319);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(102, 53);
-            this.btnUpdate.TabIndex = 0;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddUser.Location = new System.Drawing.Point(530, 378);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(102, 53);
-            this.btnAddUser.TabIndex = 1;
-            this.btnAddUser.Text = "Add";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // btnDeleteUser
-            // 
-            this.btnDeleteUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeleteUser.Location = new System.Drawing.Point(530, 437);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(102, 53);
-            this.btnDeleteUser.TabIndex = 2;
-            this.btnDeleteUser.Text = "Delete";
-            this.btnDeleteUser.UseVisualStyleBackColor = true;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
-            // 
-            // dgwUsers
-            // 
-            this.dgwUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUsers.Location = new System.Drawing.Point(109, 12);
-            this.dgwUsers.Name = "dgwUsers";
-            this.dgwUsers.RowTemplate.Height = 25;
-            this.dgwUsers.Size = new System.Drawing.Size(618, 223);
-            this.dgwUsers.TabIndex = 3;
-            this.dgwUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsers_CellContentClick);
-            this.dgwUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsers_CellDoubleClick);
             // 
             // lblNameSurname
             // 
             this.lblNameSurname.AutoSize = true;
             this.lblNameSurname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNameSurname.Location = new System.Drawing.Point(109, 319);
+            this.lblNameSurname.Location = new System.Drawing.Point(56, 112);
             this.lblNameSurname.Name = "lblNameSurname";
             this.lblNameSurname.Size = new System.Drawing.Size(105, 19);
-            this.lblNameSurname.TabIndex = 32;
+            this.lblNameSurname.TabIndex = 48;
             this.lblNameSurname.Text = "Name-Surname";
             // 
             // lblMail
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMail.Location = new System.Drawing.Point(109, 464);
+            this.lblMail.Location = new System.Drawing.Point(56, 257);
             this.lblMail.Name = "lblMail";
             this.lblMail.Size = new System.Drawing.Size(48, 19);
-            this.lblMail.TabIndex = 31;
+            this.lblMail.TabIndex = 47;
             this.lblMail.Text = "E-mail";
             // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCountry.Location = new System.Drawing.Point(109, 435);
+            this.lblCountry.Location = new System.Drawing.Point(56, 228);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(58, 19);
-            this.lblCountry.TabIndex = 30;
+            this.lblCountry.TabIndex = 46;
             this.lblCountry.Text = "Country";
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCity.Location = new System.Drawing.Point(109, 406);
+            this.lblCity.Location = new System.Drawing.Point(56, 199);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(34, 19);
-            this.lblCity.TabIndex = 29;
+            this.lblCity.TabIndex = 45;
             this.lblCity.Text = "City";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAddress.Location = new System.Drawing.Point(109, 377);
+            this.lblAddress.Location = new System.Drawing.Point(56, 170);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(60, 19);
-            this.lblAddress.TabIndex = 28;
+            this.lblAddress.TabIndex = 44;
             this.lblAddress.Text = "Address";
             // 
             // lblPhoneNum
             // 
             this.lblPhoneNum.AutoSize = true;
             this.lblPhoneNum.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPhoneNum.Location = new System.Drawing.Point(109, 348);
+            this.lblPhoneNum.Location = new System.Drawing.Point(56, 141);
             this.lblPhoneNum.Name = "lblPhoneNum";
             this.lblPhoneNum.Size = new System.Drawing.Size(101, 19);
-            this.lblPhoneNum.TabIndex = 27;
+            this.lblPhoneNum.TabIndex = 43;
             this.lblPhoneNum.Text = "Phone Number";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPassword.Location = new System.Drawing.Point(109, 290);
+            this.lblPassword.Location = new System.Drawing.Point(56, 83);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(69, 19);
-            this.lblPassword.TabIndex = 26;
+            this.lblPassword.TabIndex = 42;
             this.lblPassword.Text = "Password";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUsername.Location = new System.Drawing.Point(109, 261);
+            this.lblUsername.Location = new System.Drawing.Point(56, 54);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(70, 19);
-            this.lblUsername.TabIndex = 25;
+            this.lblUsername.TabIndex = 41;
             this.lblUsername.Text = "Username";
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(225, 464);
+            this.txtMail.Location = new System.Drawing.Point(172, 257);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(100, 23);
-            this.txtMail.TabIndex = 24;
+            this.txtMail.TabIndex = 40;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(225, 435);
+            this.txtCountry.Location = new System.Drawing.Point(172, 228);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(100, 23);
-            this.txtCountry.TabIndex = 23;
+            this.txtCountry.TabIndex = 39;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(225, 406);
+            this.txtCity.Location = new System.Drawing.Point(172, 199);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(100, 23);
-            this.txtCity.TabIndex = 22;
+            this.txtCity.TabIndex = 38;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(225, 377);
+            this.txtAddress.Location = new System.Drawing.Point(172, 170);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(100, 23);
-            this.txtAddress.TabIndex = 21;
+            this.txtAddress.TabIndex = 37;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(225, 348);
+            this.txtPhone.Location = new System.Drawing.Point(172, 141);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 23);
-            this.txtPhone.TabIndex = 20;
+            this.txtPhone.TabIndex = 36;
             // 
             // txtNameSurname
             // 
-            this.txtNameSurname.Location = new System.Drawing.Point(225, 319);
+            this.txtNameSurname.Location = new System.Drawing.Point(172, 112);
             this.txtNameSurname.Name = "txtNameSurname";
             this.txtNameSurname.Size = new System.Drawing.Size(100, 23);
-            this.txtNameSurname.TabIndex = 19;
+            this.txtNameSurname.TabIndex = 35;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(225, 290);
+            this.txtPassword.Location = new System.Drawing.Point(172, 83);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 23);
-            this.txtPassword.TabIndex = 18;
+            this.txtPassword.TabIndex = 34;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(225, 261);
+            this.txtUsername.Location = new System.Drawing.Point(172, 54);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 23);
-            this.txtUsername.TabIndex = 17;
+            this.txtUsername.TabIndex = 33;
             // 
-            // btnListed
+            // btnSave
             // 
-            this.btnListed.Location = new System.Drawing.Point(530, 261);
-            this.btnListed.Name = "btnListed";
-            this.btnListed.Size = new System.Drawing.Size(102, 48);
-            this.btnListed.TabIndex = 33;
-            this.btnListed.Text = "Listed";
-            this.btnListed.UseVisualStyleBackColor = true;
-            this.btnListed.Click += new System.EventHandler(this.btnListed_Click);
+            this.btnSave.Location = new System.Drawing.Point(414, 54);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 49;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // AdminPage
+            // Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(890, 568);
-            this.Controls.Add(this.btnListed);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblNameSurname);
             this.Controls.Add(this.lblMail);
             this.Controls.Add(this.lblCountry);
@@ -265,14 +216,9 @@ namespace ooplab
             this.Controls.Add(this.txtNameSurname);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.dgwUsers);
-            this.Controls.Add(this.btnDeleteUser);
-            this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.btnUpdate);
-            this.Name = "AdminPage";
-            this.Text = "AdminPage";
-            this.Load += new System.EventHandler(this.AdminPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUsers)).EndInit();
+            this.Name = "Update";
+            this.Text = "Update";
+            this.Load += new System.EventHandler(this.Update_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,10 +226,6 @@ namespace ooplab
 
         #endregion
 
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAddUser;
-        private System.Windows.Forms.Button btnDeleteUser;
-        private System.Windows.Forms.DataGridView dgwUsers;
         private System.Windows.Forms.Label lblNameSurname;
         private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label lblCountry;
@@ -300,6 +242,6 @@ namespace ooplab
         private System.Windows.Forms.TextBox txtNameSurname;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnListed;
+        private System.Windows.Forms.Button btnSave;
     }
 }
