@@ -72,3 +72,8 @@ C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcorea
 C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.AdminPage.resources
 C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.Profile.resources
 C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.Update.resources
+C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.aboutGame.resources
+C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.AdminPage.resources
+C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.Profile.resources
+C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.signUp.resources
+C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.Update.resources

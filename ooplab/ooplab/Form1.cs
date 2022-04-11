@@ -127,5 +127,11 @@ namespace ooplab
 
             return Sb.ToString();
         }
+
+        private void btnAboutGame_Click_1(object sender, EventArgs e)
+        {
+            aboutGame credits = new aboutGame();
+            credits.ShowDialog();
+        }
     }
 }
