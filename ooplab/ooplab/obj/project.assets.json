@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Sinan\\.nuget\\packages\\": {},
+    "C:\\Users\\goknu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
+      "projectUniqueName": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
       "projectName": "ooplab",
-      "projectPath": "C:\\Users\\Sinan\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
-      "packagesPath": "C:\\Users\\Sinan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\obj\\",
+      "projectPath": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\ooplab.csproj",
+      "packagesPath": "C:\\Users\\goknu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\goknu\\Documents\\GitHub\\ooplab2_project\\ooplab\\ooplab\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sinan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\goknu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
