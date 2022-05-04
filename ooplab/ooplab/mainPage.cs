@@ -46,5 +46,11 @@ namespace ooplab
             Profile profileScreen = new Profile(username);
             profileScreen.Show();
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            gamePage gameScreen = new gamePage();
+            gameScreen.Show();
+        }
     }
 }
