@@ -29,22 +29,14 @@ namespace ooplab
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlGame = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // pnlGame
-            // 
-            this.pnlGame.Location = new System.Drawing.Point(0, 2);
-            this.pnlGame.Name = "pnlGame";
-            this.pnlGame.Size = new System.Drawing.Size(905, 592);
-            this.pnlGame.TabIndex = 0;
             // 
             // gamePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 596);
-            this.Controls.Add(this.pnlGame);
+            this.ClientSize = new System.Drawing.Size(802, 447);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "gamePage";
             this.Text = "gamePage";
             this.Load += new System.EventHandler(this.gamePage_Load);
@@ -53,7 +45,5 @@ namespace ooplab
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlGame;
     }
 }
