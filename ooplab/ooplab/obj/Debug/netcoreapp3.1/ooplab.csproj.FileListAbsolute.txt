@@ -80,3 +80,4 @@ C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcorea
 C:\Users\goknu\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.gamePage.resources
 C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.aboutGame.resources
 C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.gamePage.resources
+C:\Users\Sinan\Documents\GitHub\ooplab2_project\ooplab\ooplab\obj\Debug\netcoreapp3.1\ooplab.helpPage.resources

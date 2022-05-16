@@ -133,5 +133,11 @@ namespace ooplab
             aboutGame credits = new aboutGame();
             credits.ShowDialog();
         }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            helpPage help = new helpPage();
+            help.ShowDialog();
+        }
     }
 }
