@@ -35,5 +35,11 @@
     <Setting Name="adminname" Type="System.String" Scope="User">
       <Value Profile="(Default)">admin</Value>
     </Setting>
+    <Setting Name="lastUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="lastpword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

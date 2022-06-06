@@ -154,5 +154,29 @@ namespace ooplab {
                 this["adminname"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastUser {
+            get {
+                return ((string)(this["lastUser"]));
+            }
+            set {
+                this["lastUser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastpword {
+            get {
+                return ((string)(this["lastpword"]));
+            }
+            set {
+                this["lastpword"] = value;
+            }
+        }
     }
 }

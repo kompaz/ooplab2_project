@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ooplab.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -38,9 +40,9 @@ namespace ooplab
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
           if(!System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text,"[a-zA-Z]"))
-            {
+          {
                 textBox1.Clear();
-            }
+          }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -50,44 +52,51 @@ namespace ooplab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            XmlDocument xdosya = new XmlDocument();
-            xdosya.Load(@"veri.xml");
-            foreach (XmlNode node in xdosya.DocumentElement)
-            {
-                if ((node["Username"].InnerText) == textBox1.Text && node["Password"].InnerText == sha256_hash(textBox2.Text))
-                {
-                    mainPage menu = new mainPage(node["Username"].InnerText);
-                    Settings1.Default.username = textBox1.Text;
-                    Settings1.Default.Save();
-                    this.Hide();
-                    
-                    menu.ShowDialog();
-                    //Console.WriteLine((node["Username"].InnerText),Environment.NewLine);
-                    //Console.WriteLine((node["Password"].InnerText),Environment.NewLine);
+            SqlCommand commandList = new SqlCommand("Select userPassword from userTable where userName like '" + textBox1.Text + "'", sqlOperations.cnn);
 
-                    this.Close();
-                }
+            sqlOperations.CheckConnection(sqlOperations.cnn);
+
+            SqlDataReader dr = commandList.ExecuteReader();
+
+            dr.Read();
+            if (textBox2.Text == dr["userPassword"].ToString())
+            {
+                mainPage menu = new mainPage(textBox1.Text);
+                Settings1.Default.username = textBox1.Text;
+                Settings1.Default.lastpword = textBox2.Text;
+                Settings1.Default.Save();
                 
+                this.Hide();
+                menu.ShowDialog();
+                
+                this.Close();
+                dr.Close();
             }
-            MessageBox.Show("Username and password not match");
-
-            /*for (int i=0;i<userList.Count;i++)
+            else
             {
-                if(userList[i].Username == textBox1.Text && userList[i].Password == textBox2.Text)
-                {
-                    
-                    mainPage menu = new mainPage();
-                    //menu.Show();
-                    
-                    Settings1.Default.username = textBox1.Text;
-                    Settings1.Default.Save();
-                    this.Hide();
-                    menu.ShowDialog();
-                    this.Close();
-                   
-                    
-                }
-            }*/
+                dr.Close();
+                MessageBox.Show("Username and password not match");
+            }
+
+
+            //XmlDocument xdosya = new XmlDocument();
+            //xdosya.Load(@"veri.xml");
+            //foreach (XmlNode node in xdosya.DocumentElement)
+            //{
+            //    if ((node["Username"].InnerText) == textBox1.Text && node["Password"].InnerText == sha256_hash(textBox2.Text))
+            //    {
+            //        mainPage menu = new mainPage(node["Username"].InnerText);
+            //        
+            //        this.Hide();
+
+            //        menu.ShowDialog();
+            //        //Console.WriteLine((node["Username"].InnerText),Environment.NewLine);
+            //        //Console.WriteLine((node["Password"].InnerText),Environment.NewLine);
+
+            //        this.Close();
+            //    }
+
+            //}
 
 
         }
@@ -110,8 +119,14 @@ namespace ooplab
 
             register.ShowDialog();
 
-
         }
+
+        private void btnAboutGame_Click_1(object sender, EventArgs e)
+        {
+            aboutGame credits = new aboutGame();
+            credits.ShowDialog();
+        }
+
         public static String sha256_hash(String value)
         {
             StringBuilder Sb = new StringBuilder();
@@ -128,10 +143,9 @@ namespace ooplab
             return Sb.ToString();
         }
 
-        private void btnAboutGame_Click_1(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            aboutGame credits = new aboutGame();
-            credits.ShowDialog();
+            
         }
     }
 }

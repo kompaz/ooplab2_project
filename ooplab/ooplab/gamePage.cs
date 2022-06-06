@@ -30,10 +30,12 @@ namespace ooplab
             {
                 onClick = false;
                 clr = btn.BackColor;
-                tempBtn = btn;
+                tempBtn = btn;  
             }
             else if (!onClick && btn.BackColor == Color.LightBlue)
             {
+                int counter =0;
+               
                 onClick = true;
                 btn.BackColor = clr;
                 tempBtn.BackColor = Color.LightBlue;
@@ -55,6 +57,21 @@ namespace ooplab
 
                     index = randomName.Next(0, Shape.Count);
                     MyButtons[a, b].Text = Shape[index];
+                }
+
+                for (int i = 0; i < row; i++)
+                {
+                    for (int j = 0; j < col; j++)
+                    {
+                        if (MyButtons[i, j].BackColor == Color.LightBlue)
+                        {
+                            counter++;
+                        }  
+                    }
+                }
+                if (counter < 3)
+                {
+                    MessageBox.Show("GAME OVER!");
                 }
             }
             
@@ -101,10 +118,8 @@ namespace ooplab
                     btn.BackColor = Color.LightBlue;
                     btn.Click += new EventHandler(button_Click);
                     MyButtons[i, j] = btn;
-                    this.Controls.Add(btn);
-                    
+                    this.Controls.Add(btn);                    
                 }
-               
             }
             this.AutoSize = true;
 
@@ -123,7 +138,6 @@ namespace ooplab
             {
                 Colour.Add(Color.Purple);
             }
-
             
             if(Settings1.Default.data_triangle)
             {
@@ -154,7 +168,6 @@ namespace ooplab
                 index = randomName.Next(0, Shape.Count);
                 MyButtons[a, b].Text = Shape[index];
             }
-            
 
         }
     }

@@ -96,6 +96,7 @@ namespace ooplab
             this.dgwUsers.TabIndex = 3;
             this.dgwUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsers_CellContentClick);
             this.dgwUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUsers_CellDoubleClick);
+            this.dgwUsers.SelectionChanged += new System.EventHandler(this.dgwUsers_SelectionChanged);
             // 
             // lblNameSurname
             // 
