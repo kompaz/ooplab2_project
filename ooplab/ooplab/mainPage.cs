@@ -43,7 +43,7 @@ namespace ooplab
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            Profile profileScreen = new Profile(username);
+            Profile profileScreen = new Profile();
             profileScreen.Show();
         }
 

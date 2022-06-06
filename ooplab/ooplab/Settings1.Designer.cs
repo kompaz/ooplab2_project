@@ -154,5 +154,17 @@ namespace ooplab {
                 this["adminname"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastpword {
+            get {
+                return ((string)(this["lastpword"]));
+            }
+            set {
+                this["lastpword"] = value;
+            }
+        }
     }
 }
