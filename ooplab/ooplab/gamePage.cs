@@ -34,6 +34,8 @@ namespace ooplab
             }
             else if (!onClick && btn.BackColor == Color.LightBlue)
             {
+                int counter = 0;
+
                 onClick = true;
                 btn.BackColor = clr;
                 tempBtn.BackColor = Color.LightBlue;
@@ -56,20 +58,35 @@ namespace ooplab
                     index = randomName.Next(0, Shape.Count);
                     MyButtons[a, b].Text = Shape[index];
                 }
+
+                for (int i = 0; i < row; i++)
+                {
+                    for (int j = 0; j < col; j++)
+                    {
+                        if (MyButtons[i, j].BackColor == Color.LightBlue)
+                        {
+                            counter++;
+                        }
+                    }
+                }
+                if (counter < 3)
+                {
+                    MessageBox.Show("GAME OVER!");
+                }
             }
-            
+
         }
 
         Button[,] MyButtons;
-       
+
         private void gamePage_Load(object sender, EventArgs e)
         {
-           
+
 
             if (Settings1.Default.user_data == "rBtnEasy")
             {
                 col = 15;
-                row = 15;               
+                row = 15;
             }
             else if (Settings1.Default.user_data == "rBtnNormal")
             {
@@ -82,12 +99,12 @@ namespace ooplab
                 row = 6;
             }
             else if (Settings1.Default.user_data == "rBtnCustom")
-            {               
+            {
                 col = Settings1.Default.data_custom_row;
                 row = Settings1.Default.data_custom_clmn;
             }
 
-            this.Size = new Size(19+row*37, 19+col*38); 
+            this.Size = new Size(19 + row * 37, 19 + col * 38);
             MyButtons = new Button[row, col];
 
             for (int i = 0; i < row; i++)
@@ -96,21 +113,19 @@ namespace ooplab
                 for (int j = 0; j < col; j++)
                 {
                     Button btn = new Button();
-                    btn.Location = new Point(5+(i*36),5+j*36);
+                    btn.Location = new Point(5 + (i * 36), 5 + j * 36);
                     btn.Size = new Size(35, 35);
                     btn.BackColor = Color.LightBlue;
                     btn.Click += new EventHandler(button_Click);
                     MyButtons[i, j] = btn;
                     this.Controls.Add(btn);
-                    
                 }
-               
             }
             this.AutoSize = true;
 
             Random randomName = new Random(); //only required once
 
-            
+
             if (Settings1.Default.data_blue)
             {
                 Colour.Add(Color.Blue);
@@ -124,16 +139,15 @@ namespace ooplab
                 Colour.Add(Color.Purple);
             }
 
-            
-            if(Settings1.Default.data_triangle)
+            if (Settings1.Default.data_triangle)
             {
                 Shape.Add("△");
             }
-            if(Settings1.Default.data_square)
+            if (Settings1.Default.data_square)
             {
                 Shape.Add("☐");
             }
-            if(Settings1.Default.data_round)
+            if (Settings1.Default.data_round)
             {
                 Shape.Add("◯");
             }
@@ -142,7 +156,7 @@ namespace ooplab
             {
                 int a = randomName.Next(0, row);
                 int b = randomName.Next(0, col);
-                if(MyButtons[a,b].BackColor != Color.LightBlue)
+                if (MyButtons[a, b].BackColor != Color.LightBlue)
                 {
                     i--;
                     continue;
@@ -154,7 +168,6 @@ namespace ooplab
                 index = randomName.Next(0, Shape.Count);
                 MyButtons[a, b].Text = Shape[index];
             }
-            
 
         }
     }
